@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clearout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="titlebar">
+      <div class="brand"><span class="logo" data-icon="sparkle"></span><span>Clearout</span></div>
+      <label class="search">
+        <span class="ico" data-icon="search"></span>
+        <input id="q" type="search" placeholder="Search programs" autocomplete="off" spellcheck="false" aria-label="Search programs">
+        <kbd>Ctrl F</kbd>
+      </label>
+    </header>
+    <aside class="sidebar">
+      <nav id="nav" aria-label="Views"></nav>
+      <div class="side-foot">
+        <div id="summary" class="summary"></div>
+        <button id="btn-settings" class="nav-item" type="button"><span class="ico" data-icon="settings"></span><span>Settings</span></button>
+      </div>
+    </aside>
+    <main class="main">
+      <div id="admin-banner" class="banner" hidden></div>
+      <div class="toolbar">
+        <div>
+          <h1 id="title">All programs</h1>
+          <p id="subtitle"></p>
+        </div>
+        <div class="tools">
+          <label class="select"><span class="ico" data-icon="sort"></span>
+            <select id="sort" aria-label="Sort by">
+              <option value="name:1">Name (A–Z)</option>
+              <option value="size:-1">Size (largest)</option>
+              <option value="date:-1">Installed (newest)</option>
+              <option value="date:1">Installed (oldest)</option>
+            </select>
+          </label>
+          <button id="btn-refresh" class="btn ghost icon-btn" type="button" title="Refresh list" aria-label="Refresh list"><span class="ico" data-icon="refresh"></span></button>
+        </div>
+      </div>
+      <div id="list" class="list" role="list"></div>
+    </main>
+    <aside id="detail" class="detail" hidden aria-label="Program details"></aside>
+    <div id="actionbar" class="actionbar" hidden></div>
+  </div>
+  <div id="modals"></div>
+  <div id="toasts" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
