@@ -1,5 +1,3 @@
-#Clearout
-
 Clearout is a modern uninstaller for Windows. It shows everything installed on your PC, removes programs with one click, and then finds the files they leave behind so you can clear those out too.
 
 What it can do
